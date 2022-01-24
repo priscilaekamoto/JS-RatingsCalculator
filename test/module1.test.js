@@ -67,6 +67,7 @@ describe('Module 01 - Calculate Average Rating', () => {
   });
 
   it('Should set `rating`. @rating-value', () => {
+
     assert(for_each_matched, 'Does the `forEach` loop exist?');
     const rating_for_each = for_each.find(jscs.AssignmentExpression, { left: { type: 'Identifier', name: 'rating' }})
     const rating_for_each_right = rating_for_each.length ? rating_for_each.get().value.right : false;
